@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #db2777;
+  --secondary-color: #9ca3af;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+}
+
+input,
+label {
+  display: block;
+}
+
+input {
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+#check-number {
+  display: block;
+  margin: auto;
+}
