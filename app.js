@@ -6,18 +6,30 @@ const outputText = document.querySelector("#output-text")
 const checkBirthdateIsLucky = () =>{
     const dob = dateOfBirth.value
     const sum = calculateSum(dob)
-    if(sum&&dob)
+    // if(dateOfBirth.value == "" || luckyNumber.value ==="" ){
+    //     outputText.innerText = 'please provide the details'
+    // }
     compareValues(sum, luckyNumber.value)
-    outputText.innerText = "Please enter the data "
 }
 
 const compareValues = (sum, luckyNumber) =>{
     // console.log(sum,luckyNumber)
-    if(sum%luckyNumber === 0){
-       outputText.innerText = "your lucky"
-    }else{
-        outputText.innerText = "Make your own luck!!"
+    // if(dateOfBirth.value !== '' || luckyNumber.value !== ''){
+    if(isEmpty(dateOfBirth.value)){
+            
+        outputText.innerText = 'please provide the details'
+    }else {
+        if(sum%luckyNumber === 0){
+            outputText.innerText = "you are lucky champ"
+        }else{
+            outputText.innerText = "Make your own luck!!"
+        }
     }
+    
+}
+
+function isEmpty(str){
+    return !str.trim().length
 }
 
 const calculateSum = (dob) =>{
